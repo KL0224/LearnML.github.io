@@ -1,0 +1,3 @@
+========================DATASET========================
+1. Tập dữ liệu được biểu diễn dưới dạng bảng và được gán nhãn.
+2. Có sẵn trong thư viện sklearn.

@@ -1,0 +1,5 @@
+===================MACHINE LEARNING======================
+1. What is Machine Learning?
+2. Classification : Phân lớp.
+3. Cây quyết định : Y or N.
+

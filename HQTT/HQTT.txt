@@ -1,0 +1,40 @@
+=========================HỒI QUY TUYẾN TÍNH===================
+						(LINER REGRESSION)
+1. Introduction
+a. Hồi quy tuyến tính là một thuật toán học có giám sát, trong đó đầu ra dự đoán là liên tục và có độ dốc không đổi.
+b. Nó được sử dụng để dự đoán các giá trị liên tục(ví dụ: doanh số, giá cả) thay vì cố gắng phân loại chúng thành các danh mục hay nhóm (ví dụ: mèo, chó)
+c. Có 2 loại chính:
+* Simple regression
+* Multivariable regression.
+d. Lưu ý : thường các dataset thường được gán nhãn.
+2. Simple regression: phương trình đường thẳng.
+a. Phương trình : y = mx + b trong đó m, b là các biến mà chúng ta cố gắng học với mỗi giá trị của x thì sẽ có giá trị y.
+b Ví dụ: Ta có Bán các sản phẩm radio(biết $) với giá sale cần dự đoán.
+Ta có một dự đoán:
+Radio : Biến độc lập (features).
+Weight : Hệ số của biến độc lập (Weight).
+Bias : Giá trị lệch để bù đắp cho những sai số.
+==>> Sales = Weight*Radio + Bias
+3. Cost function: 
+* Chúng ta cần 1 hàm chi phí để tối ưu weight.
+* Hàm lỗi MSE(measures squared error) : hàm này đo sự sai khác bằng cách lấy trung bình của bình phương giữa các giá trị dự đoán và giá trị thực tế.
+* Đầu ra là một số duy nhất thể hiện chi phí của tập các trọng số(weight) hiện tại.
+* Mục tiêu là tối thiểu MSE để tăng độ chính xác hiện tại.
+***********************MATH*******************
+MSE = (1/N).Tổng(1, n)(yi - (mxi + b))^2 (Giống với s^2 trong sxtk) với yi là giá trị thực tế và mx + b là giá trị dự đoán, N là tổng sample
+4. Gradient descent : Tượng trưng cho chi phí.
+* Phải tìm điểm chi phí thấp nhất(Global Minima là tốt nhất nhưng ít khi tìm ra, chỉ có thể tim dễ dàng Local Minima) để tối ưu weight.
+* Các điểm Local Minima thì có đạo hàm gần bằng 0 (bằng 0 thì càng tốt).
+* Đạo hàm phía bên trái nghịch biến (không dương == âm), đạo hầm bên trái đồng biến (không âm == dương) ==> Tìm min.
+* Max thì ngược lại min.
+* Đạo hàm riêng theo m của hàm chi phí thì được weight mới.
+* Đạo hàm riêng theo b của hàm chi phí thì được biaas mới.
+* Đạo hàm tổng là :
+[1/N * Tổng(-2xi(yi - (mxi + b))), 1/N * Tong(-2(yi - (mxi + b)))]
+* Learning rate : tốc độ học.
+* Traning : 
+	- Lập đi lặp lại nhiều lần.
+	- Update weight và bias với Gradient decent.
+	- Dừng khi đến ngưỡng lỗi chấp nhận được hoặc không thể giảm được chi phí
+* Chúng ta thục hiện việc tính weight và bias mới bằng cách: lấy weight và bias hiện tại - (tính weight và bias tạ mỗi điểm dữ liệu rồi lấy trung bình của tất cả các điểm dữ liệu sau đó nhân với learning rate)
+

@@ -1,0 +1,29 @@
+=====================MATPLOTLIB=====================
+1. Thường dùng để vẽ đồ thị.
+2. Code trên python terminal:
+>>> import matplotlib.pyplot as mat
+>>> a = [1, 2]
+>>> b = [2, 3]
+>>> mat.plot(a, b)
+[<matplotlib.lines.Line2D object at 0x0000013B8BA89DD0>]
+>>> mat.show()
+>>> x = [3, 5,4]
+>>> y = [7, 9, 5]
+>>> mat.plot(x, y)
+[<matplotlib.lines.Line2D object at 0x00000280F62CDA50>]
+>>> mat.show()
+3. Code trên sublime text:
+a. Vẽ đường thẳng:
+import matplotlib.pyplot as mat
+a = [0, 1, 1]
+b = [5, 6, 10]
+mat.plot(a, b)
+mat.show()
+b. Vẽ điểm:
+import matplotlib.pyplot as mat
+import numpy as np
+image = np.random.rand(30, 30)
+mat.imshow(image)
+mat.show()
+
+

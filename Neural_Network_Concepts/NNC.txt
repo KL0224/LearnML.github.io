@@ -1,0 +1,17 @@
+==================NEURAL NETWORK CONCEPTS====================
+1. Cấu trúc của neural network.
+=================> Input -> Hidden -> Output.
+2. Neuron.
++ Một neuron lấy một nhóm các đầu trọng số, áp dụng hàm kích hoạt trả về một đầu ra.
+3. Hoạt động của neuron.
+4. Activation Functions:
+a. Sigmoid : z(x) = 1 / (1 + e^-x)
+b. tanh(x)
+c. ReLU : max(0, x)
+d. Leaky ReLU : max(0.1x, x)
+e. Maxout : max (w1^T*x + b1, w2^T*x + b2)
+f. ELU:
+x với x >= 0
+a.(e^x - 1) với x < 0
+4. Loss function: MSE(L2) và Cross-entropy Loss.
+5. Tối ưu lỗi : Gradient descent.

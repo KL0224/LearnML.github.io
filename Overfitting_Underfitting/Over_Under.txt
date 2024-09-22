@@ -1,0 +1,23 @@
+===========================OVERFITTING========================
++ Hiện tượng thuật toans đạt kết quả tốt trên tập dữ liệu training nhưng lại kém trên tập dữ liệu thực tế.
+
+==========================UNDERFITTING=======================
++ Do thuật toán quá đơn giản nên cho kết quả kém trên tập training lẫn tập test.
+
+=========================KHẮC PHỤC===========================
+1. Cross validation:
++ Chia training set thành nhiều phần rồi lấy 1 phần để validate, các phần còn lại dùng để xây dựng model.
+2. Regularization:
++ Thêm hàm mất mát một số hạng nữa, số hạng này thường dùng để đánh gí độ phức tạp của mô hình. Sô hạng càng lớn thì độ phức tâạp của model càng cao.
++ L(x, y) = Tổng(1 -> n) (yi - h(xi))^2 + landa * Tổng(1 -> n) |phi i|
++ L(x, y) = Tổng(1 -> n) (yi - h(xi))^2 + landa * Tổng(1 -> n) phi^2
+
+====> Tổng hợp:
+1. Uderfitting (High bias):
++ Tìm kiếm biến giải thích (feature) khác.
++ Thêm vào các feature dạng (x1^2, x2^2, x1.x2).
++ Giảm parameter landa xuống.
+2. Overfitting (Hight variance):
+1. Tăng số lương training data.
+2. Giảm số lượng biến giải thích (feature).
+3. Tăng độ lớn của parameter chuẩn hóa landa.

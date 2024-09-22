@@ -1,0 +1,19 @@
+=======================ACTIVATION FUNCTION============
+1. ReLU (Rectifiel Linear Units)
+* Function:
+R(z) = 
+	z, z > 0
+	0, z <= 0
+* Derivative:
+R'(z) = 
+	1, z > 0
+	0, z < 0
+2. Sigmoid
+* Function:
+S(z) = 1 /(1 + e^-z)
+* S'(z) = S(z) * (1 - S(z))
+3. Tanh
+* Function:
+tanh(z) = (e^z - e^-z) / (e^z + e^-z)
+* Derivative:
+tanh'(z) = 1 - tanh(z)^2
